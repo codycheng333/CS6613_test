@@ -2,24 +2,15 @@ import tensorflow as tf
 import numpy as np
 
 fashion_mnist = tf.keras.datasets.fashion_mnist
-
-
-
 (X_train, y_train), (X_test, y_test) =fashion_mnist.load_data()
-
 print('Train: X=%s, y=%s' % (X_train.shape, y_train.shape))
 print('Test: X=%s, y=%s' % (X_test.shape, y_test.shape))
-import numpy as np
 np.set_printoptions(threshold=np.inf)  
-
-
 def set_label(targets, num):
     result = np.zeros((num, 10))
     for i in range(num):
         result[i][targets[i]] = 1
     return result
-
-
 def img2col(x, ksize, stride):
     wx, hx, cx = x.shape              # [width,height,channel]
     feature_w = (wx - ksize) // stride + 1   # feature map size       
