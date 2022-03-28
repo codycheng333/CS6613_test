@@ -1,5 +1,6 @@
 import tensorflow as tf
 import keras
+import matplotlib.pyplot as plt
 
 (train_images, train_labels), (test_images, test_labels) = keras.datasets.cifar10.load_data()
 
