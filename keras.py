@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras import datasets, layers, models
+from keras import datasets, layers, models
 
 (train_images, train_labels), (test_images, test_labels) = datasets.cifar10.load_data()
 
